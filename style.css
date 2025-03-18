@@ -1,10 +1,10 @@
-/* Designer-focused serif style with pure blue accent color */
+/* Designer-focused serif style with pure blue for all text */
 :root {
     --accent-color: #0066FF; /* Super pure blue */
-    --text-color: #333333;
+    --text-color: #0066FF;   /* All text now in blue */
     --light-accent: #E6F0FF; /* Light blue for subtle elements */
     --link-color: #0066FF;
-    --link-hover: #0052CC; /* Slightly darker blue for hover states */
+    --link-hover: #0052CC;   /* Slightly darker blue for hover states */
 }
 
 body {
@@ -40,7 +40,7 @@ body {
     height: 300px;
     margin-left: 30px;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 50%;  /* Back to circle */
     border: 3px solid var(--light-accent);
 }
 
@@ -98,7 +98,7 @@ li {
 footer {
     margin-top: 60px;
     font-size: 14px;
-    color: #777;
+    color: var(--text-color);  /* Footer text also blue now */
     border-top: 1px solid var(--light-accent);
     padding-top: 20px;
 }
