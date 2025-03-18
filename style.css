@@ -1,10 +1,11 @@
-/* Designer-focused serif style with pure blue for all text */
+/* Designer-focused serif style with blue text and red accents */
 :root {
     --accent-color: #0066FF; /* Super pure blue */
-    --text-color: #0066FF;   /* All text now in blue */
+    --text-color: #0066FF;   /* All text in blue */
     --light-accent: #E6F0FF; /* Light blue for subtle elements */
-    --link-color: #0066FF;
-    --link-hover: #0052CC;   /* Slightly darker blue for hover states */
+    --link-color: #FF0000;   /* Pure red for links */
+    --name-color: #FF0000;   /* Pure red for name */
+    --link-hover: #CC0000;   /* Darker red for hover states */
 }
 
 body {
@@ -26,7 +27,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px; /* Reduced space after header */
     border-bottom: 2px solid var(--light-accent);
     padding-bottom: 20px;
 }
@@ -36,11 +37,11 @@ body {
 }
 
 .profile-photo {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     margin-left: 30px;
     overflow: hidden;
-    border-radius: 50%;  /* Back to circle */
+    border-radius: 50%;
     border: 3px solid var(--light-accent);
 }
 
@@ -52,30 +53,36 @@ body {
 
 h1, h2, h3 {
     font-weight: normal;
-    color: var(--accent-color);
 }
 
 h1 {
     font-size: 32px;
     margin-top: 0;
     margin-bottom: 0;
+    color: var(--name-color); /* Red for name */
 }
 
 h2 {
     font-size: 24px;
-    margin-top: 30px;
-    margin-bottom: 15px;
+    margin-top: 25px; /* Reduced top margin */
+    margin-bottom: 12px; /* Slightly reduced bottom margin */
     border-bottom: 1px solid var(--light-accent);
     padding-bottom: 5px;
     display: inline-block;
+    color: var(--accent-color);
+}
+
+/* First h2 needs less top margin */
+.content h2:first-child {
+    margin-top: 0;
 }
 
 p {
-    margin-bottom: 20px;
+    margin-bottom: 18px; /* Slightly reduced */
 }
 
 a {
-    color: var(--link-color);
+    color: var(--link-color); /* Red for links */
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.2s;
@@ -88,17 +95,18 @@ a:hover {
 
 ul {
     padding-left: 20px;
-    margin-bottom: 30px;
+    margin-top: 10px; /* Added top margin */
+    margin-bottom: 25px; /* Reduced bottom margin */
 }
 
 li {
-    margin-bottom: 10px;
+    margin-bottom: 8px; /* Slightly reduced */
 }
 
 footer {
-    margin-top: 60px;
+    margin-top: 50px; /* Reduced */
     font-size: 14px;
-    color: var(--text-color);  /* Footer text also blue now */
+    color: var(--text-color);
     border-top: 1px solid var(--light-accent);
     padding-top: 20px;
 }
